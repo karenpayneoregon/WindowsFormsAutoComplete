@@ -44,7 +44,15 @@
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.departmentGetTextBox = new System.Windows.Forms.Button();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.currentPrimaryKeyTextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPatients)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // cboDepartments
@@ -137,7 +145,7 @@
             this.Column3,
             this.Column4,
             this.Column5});
-            this.dgvPatients.Location = new System.Drawing.Point(7, 184);
+            this.dgvPatients.Location = new System.Drawing.Point(14, 247);
             this.dgvPatients.Name = "dgvPatients";
             this.dgvPatients.Size = new System.Drawing.Size(468, 191);
             this.dgvPatients.TabIndex = 9;
@@ -171,17 +179,72 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Location = new System.Drawing.Point(14, 165);
+            this.groupBox1.Controls.Add(this.groupBox3);
+            this.groupBox1.Location = new System.Drawing.Point(14, 225);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(460, 8);
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             // 
+            // departmentGetTextBox
+            // 
+            this.departmentGetTextBox.Location = new System.Drawing.Point(22, 198);
+            this.departmentGetTextBox.Name = "departmentGetTextBox";
+            this.departmentGetTextBox.Size = new System.Drawing.Size(75, 23);
+            this.departmentGetTextBox.TabIndex = 11;
+            this.departmentGetTextBox.Text = "Get";
+            this.departmentGetTextBox.UseVisualStyleBackColor = true;
+            this.departmentGetTextBox.Click += new System.EventHandler(this.departmentGetTextBox_Click);
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Location = new System.Drawing.Point(0, -46);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(460, 8);
+            this.groupBox3.TabIndex = 12;
+            this.groupBox3.TabStop = false;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.groupBox5);
+            this.groupBox4.Controls.Add(this.groupBox6);
+            this.groupBox4.Location = new System.Drawing.Point(13, 184);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(460, 8);
+            this.groupBox4.TabIndex = 12;
+            this.groupBox4.TabStop = false;
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Location = new System.Drawing.Point(0, -46);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(460, 8);
+            this.groupBox5.TabIndex = 12;
+            this.groupBox5.TabStop = false;
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Location = new System.Drawing.Point(0, 39);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(460, 8);
+            this.groupBox6.TabIndex = 11;
+            this.groupBox6.TabStop = false;
+            // 
+            // currentPrimaryKeyTextBox
+            // 
+            this.currentPrimaryKeyTextBox.Location = new System.Drawing.Point(108, 198);
+            this.currentPrimaryKeyTextBox.Name = "currentPrimaryKeyTextBox";
+            this.currentPrimaryKeyTextBox.Size = new System.Drawing.Size(100, 20);
+            this.currentPrimaryKeyTextBox.TabIndex = 13;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(487, 387);
+            this.ClientSize = new System.Drawing.Size(487, 450);
+            this.Controls.Add(this.currentPrimaryKeyTextBox);
+            this.Controls.Add(this.groupBox4);
+            this.Controls.Add(this.departmentGetTextBox);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgvPatients);
             this.Controls.Add(this.label4);
@@ -198,6 +261,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add Patient";
             ((System.ComponentModel.ISupportInitialize)(this.dgvPatients)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -221,6 +286,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button departmentGetTextBox;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.TextBox currentPrimaryKeyTextBox;
     }
 }
 

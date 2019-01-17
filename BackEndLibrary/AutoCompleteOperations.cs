@@ -29,8 +29,8 @@ namespace BackEndLibrary
         /// <summary>
         /// Read in all departments from database
         /// </summary>
-        /// <returns>Dictionary of deparment names and primary key</returns>
-        public Dictionary<string,int> Deparments()
+        /// <returns>Dictionary of department names and primary key</returns>
+        public Dictionary<string,int> Departments()
         {
             
             var results = new Dictionary<string,int>();

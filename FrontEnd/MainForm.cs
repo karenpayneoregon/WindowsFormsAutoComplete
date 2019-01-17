@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -36,13 +37,13 @@ namespace FrontEnd
              * Returns all departments
              */
             var ops = new AutoCompleteOperations();
-            bs.DataSource = ops.Deparments();
+            bs.DataSource = ops.Departments();
 
             cboDepartments.DataSource = bs;
 
             /*
-             * key   - deparment name
-             * value - deparment identifier
+             * key   - department name
+             * value - department identifier
              */
             cboDepartments.DisplayMember = "key";
             cboDepartments.ValueMember = "value";
@@ -103,6 +104,15 @@ namespace FrontEnd
             {
                 MessageBox.Show(ops.LastExceptionMessage);
             }
+        }
+
+        private void departmentGetTextBox_Click(object sender, EventArgs e)
+        {
+            if (cboDepartments.SelectedItem == null)
+            {
+                return;
+            }
+            currentPrimaryKeyTextBox.Text = ((KeyValuePair<string,int>)cboDepartments.SelectedItem).Value.ToString();
         }
     }
 }
