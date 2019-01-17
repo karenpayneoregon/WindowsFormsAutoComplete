@@ -14,6 +14,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		readme.md = readme.md
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{D7B9C214-3FAF-4013-9693-36781D0D5A98}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UserInterface", "UserInterface", "{9309FAFC-A1A9-41B4-BC5C-29E30397B59E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +39,11 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E7B3F1B7-81FE-4FDE-8E2F-C0BF6DDE8DD3} = {D7B9C214-3FAF-4013-9693-36781D0D5A98}
+		{C211F208-361B-4616-A0E6-534B48F74AF9} = {9309FAFC-A1A9-41B4-BC5C-29E30397B59E}
+		{6877F966-DD24-4944-B4F7-99CF52B7362D} = {D7B9C214-3FAF-4013-9693-36781D0D5A98}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {05D0CCBF-DBC1-4A13-9705-545171B13370}
