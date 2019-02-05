@@ -44,12 +44,13 @@
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.departmentGetTextBox = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.departmentGetTextBox = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.currentPrimaryKeyTextBox = new System.Windows.Forms.TextBox();
+            this.removeButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPatients)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -186,6 +187,14 @@
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             // 
+            // groupBox3
+            // 
+            this.groupBox3.Location = new System.Drawing.Point(0, -46);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(460, 8);
+            this.groupBox3.TabIndex = 12;
+            this.groupBox3.TabStop = false;
+            // 
             // departmentGetTextBox
             // 
             this.departmentGetTextBox.Location = new System.Drawing.Point(22, 198);
@@ -195,14 +204,6 @@
             this.departmentGetTextBox.Text = "Get";
             this.departmentGetTextBox.UseVisualStyleBackColor = true;
             this.departmentGetTextBox.Click += new System.EventHandler(this.departmentGetTextBox_Click);
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Location = new System.Drawing.Point(0, -46);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(460, 8);
-            this.groupBox3.TabIndex = 12;
-            this.groupBox3.TabStop = false;
             // 
             // groupBox4
             // 
@@ -237,11 +238,22 @@
             this.currentPrimaryKeyTextBox.Size = new System.Drawing.Size(100, 20);
             this.currentPrimaryKeyTextBox.TabIndex = 13;
             // 
+            // removeButton
+            // 
+            this.removeButton.Location = new System.Drawing.Point(301, 97);
+            this.removeButton.Name = "removeButton";
+            this.removeButton.Size = new System.Drawing.Size(75, 23);
+            this.removeButton.TabIndex = 14;
+            this.removeButton.Text = "Remove";
+            this.removeButton.UseVisualStyleBackColor = true;
+            this.removeButton.Click += new System.EventHandler(this.removeButton_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(487, 450);
+            this.Controls.Add(this.removeButton);
             this.Controls.Add(this.currentPrimaryKeyTextBox);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.departmentGetTextBox);
@@ -292,6 +304,7 @@
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.TextBox currentPrimaryKeyTextBox;
+        private System.Windows.Forms.Button removeButton;
     }
 }
 

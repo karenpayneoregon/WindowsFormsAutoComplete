@@ -33,6 +33,7 @@ namespace FrontEnd
             cboDepartments.AutoCompleteMode = AutoCompleteMode.Suggest;
             cboDepartments.AutoCompleteSource = AutoCompleteSource.ListItems;
 
+
             /*
              * Returns all departments
              */
@@ -40,6 +41,7 @@ namespace FrontEnd
             bs.DataSource = ops.Departments();
 
             cboDepartments.DataSource = bs;
+            
 
             /*
              * key   - department name
@@ -47,6 +49,8 @@ namespace FrontEnd
              */
             cboDepartments.DisplayMember = "key";
             cboDepartments.ValueMember = "value";
+
+
 
             /*
              * Get gender types into the gender ComboBox
@@ -113,6 +117,20 @@ namespace FrontEnd
                 return;
             }
             currentPrimaryKeyTextBox.Text = ((KeyValuePair<string,int>)cboDepartments.SelectedItem).Value.ToString();
+        }
+
+        private void removeButton_Click(object sender, EventArgs e)
+        {
+            var dict = (Dictionary<string, int>) bs.DataSource;
+            var item = (KeyValuePair<string, int>) cboDepartments.Items[0];
+
+            dict.Remove(item.Key);
+            bs.DataSource = null;
+            bs.DataSource = dict;
+            cboDepartments.DataSource = null;
+            cboDepartments.DataSource = bs;
+            cboDepartments.DisplayMember = "key";
+            cboDepartments.ValueMember = "value";
         }
     }
 }
